@@ -14,7 +14,9 @@ Gallery created with React
 
 В проекте было использовано следующее:
 
+Добавление Random Image API с fetch
+
 Hooks:
 State, Effect, Context
 
-Присутствует сохранение в LocalStorage, React Portal, конструкция Switch/Case, методика БЭМ, проп onMouse
+Присутствует сохранение в LocalStorage, React Portal, конструкция Switch/Case, методика БЭМ.
