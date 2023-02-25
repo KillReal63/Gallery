@@ -4,8 +4,7 @@ import Context from '../Context/StorageContext.jsx'
 
 const StorageContextProvider = ({ children }) => {
   const [items, setItems] = useState([])
-  const [isEdit, setIsEdit] = useState(false)
-  const [openModal, setOpenModal] = useState(false)
+
   const arrayItems = []
   const dataArray = localStorage.getItem('store')
   const dataArrayPush = JSON.parse(dataArray)
@@ -35,22 +34,10 @@ const StorageContextProvider = ({ children }) => {
     setItems(array)
   }
 
-  const keydownHelper = ({ key }) => {
-    switch (key) {
-      case 'Escape':
-        setIsEdit(false)
-        setOpenModal(false)
-        break
-      default:
-    }
-  }
-
   useEffect(() => {
     if (dataArray) {
       setItems(dataArrayPush)
     }
-    document.addEventListener('keydown', keydownHelper)
-    return () => document.removeEventListener('keydown', keydownHelper)
   }, [])
 
   const value = {
@@ -58,10 +45,6 @@ const StorageContextProvider = ({ children }) => {
     updateComment,
     dataArray,
     items,
-    isEdit,
-    setIsEdit,
-    openModal,
-    setOpenModal,
   }
 
   return <Context.Provider value={value}>{children}</Context.Provider>

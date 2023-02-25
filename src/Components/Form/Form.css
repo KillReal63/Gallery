@@ -25,9 +25,13 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+  border-radius: 24px;
 }
 
 .add-button:hover {
   border: 1px solid #dfe1e5;
-  border-radius: 24px;
+}
+
+.add-button:disabled {
+  border: 1px solid transparent;
 }

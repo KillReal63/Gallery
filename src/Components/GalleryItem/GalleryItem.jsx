@@ -5,16 +5,13 @@ import Modal from '../Modal/Modal.jsx'
 import './GalleryItem.css'
 
 const GalleryItem = ({ id, url, comment = '' }) => {
+  const [isEdit, setIsEdit] = useState(false)
+  const [openModal, setOpenModal] = useState(false)
   const [value, setValue] = useState(comment)
-  const { updateComment, isEdit, setIsEdit, openModal, setOpenModal } =
-    useContext(StorageContext)
+  const { updateComment } = useContext(StorageContext)
 
   return (
-    <div
-      className="item"
-      onMouseEnter={() => (comment.length === 0 ? setIsEdit(true) : undefined)}
-      onMouseLeave={() => (comment.length === 0 ? setIsEdit(false) : undefined)}
-    >
+    <div className="item">
       <div className="img-container">
         <img src={url} className="img" onClick={() => setOpenModal(true)} />
         {openModal &&
@@ -41,12 +38,12 @@ const GalleryItem = ({ id, url, comment = '' }) => {
               }}
             />
           </>
-        ) : comment.length !== 0 ? (
+        ) : (
           <>
             <div className="comment">{comment}</div>
             <button className="edit-button" onClick={() => setIsEdit(true)} />
           </>
-        ) : undefined}
+        )}
       </div>
     </div>
   )
