@@ -16,7 +16,7 @@ const Header = () => {
         throw new Error(`HTTP error! Status: ${response.status}`)
       }
 
-      addItem(uuidv4, response.url, '')
+      addItem(uuidv4(), response.url, '')
     })
   }
 
@@ -27,6 +27,7 @@ const Header = () => {
         <span>add your moment</span>
         <Form />
         <button
+         
           type="submit"
           className="random-button"
           onClick={addRandomImage}
