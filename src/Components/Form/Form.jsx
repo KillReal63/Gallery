@@ -9,7 +9,6 @@ const Form = ({}) => {
   const { addItem } = useContext(StorageContext)
 
   const onSubmit = (event) => {
-    event.preventDefault()
     addItem(uuidv4(), url, comment)
     setUrl('')
     setComment('')
