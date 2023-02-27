@@ -23,11 +23,10 @@ const Header = () => {
   return (
     <div className="header">
       <span className="logo">gallery</span>
-      <div className="logo-gallery">
+      <div className="slogan">
         <span>add your moment</span>
         <Form />
         <button
-         
           type="submit"
           className="random-button"
           onClick={addRandomImage}
