@@ -13,7 +13,7 @@ const GalleryItem = ({ id, url, comment = '' }) => {
   return (
     <div className="item">
       <div className="img-container">
-        <img src={url} className="img" onClick={() => setOpenModal(true)} />
+        <img alt="Invalid URL" src={url} className="img" onClick={() => setOpenModal(true)} />
         {openModal &&
           createPortal(
             <Modal id={id} url={url} onClose={() => setOpenModal(false)} />,
