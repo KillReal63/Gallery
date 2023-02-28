@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react'
 import Context from '../Context/StorageContext.jsx'
 
 const StorageContextProvider = ({ children }) => {
-  const [items, setItems] = useState([])
 
+  const [items, setItems] = useState([])
   const arrayItems = []
   const dataArray = localStorage.getItem('store')
   const dataArrayPush = JSON.parse(dataArray)
@@ -29,7 +29,6 @@ const StorageContextProvider = ({ children }) => {
       }
       return item
     })
-
     localStorage.setItem('store', JSON.stringify(array))
     setItems(array)
   }

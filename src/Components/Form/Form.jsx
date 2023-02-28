@@ -8,7 +8,7 @@ const Form = ({}) => {
   const [comment, setComment] = useState('')
   const { addItem } = useContext(StorageContext)
 
-  const onSubmit = (event) => {
+  const onSubmit = () => {
     addItem(uuidv4(), url, comment)
     setUrl('')
     setComment('')
