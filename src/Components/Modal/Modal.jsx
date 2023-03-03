@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import './Modal.css'
+import 'animate.css'
 
 const Modal = ({ url, onClose }) => {
   const keydownHelper = ({ key }) => {
@@ -20,7 +21,7 @@ const Modal = ({ url, onClose }) => {
   return (
     <div className="modal">
       <div className="modal-close" onClick={onClose} />
-      <img className="modal-img" src={url} />
+      <img className="modal-img" src={url} animation-name='anim'/>
     </div>
   )
 }

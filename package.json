@@ -6,13 +6,16 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"  
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@mui/material": "^5.11.10",
     "@mui/styled-engine-sc": "^5.11.9",
+    "animate.css": "^4.1.1",
     "i": "^0.3.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -25,6 +28,7 @@
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^3.1.0",
+    "gh-pages": "^5.0.0",
     "prettier": "2.8.4",
     "vite": "^4.1.0"
   }
