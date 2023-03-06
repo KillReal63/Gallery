@@ -20,4 +20,4 @@ State, Effect, Context
 
 Присутствует сохранение в LocalStorage, React Portal, конструкция Switch/Case, методика БЭМ.
 
-Задествованные инструменты: uuid, sanitize.css
+Задествованные инструменты: uuid, sanitize.css, animated.css, EsLint
