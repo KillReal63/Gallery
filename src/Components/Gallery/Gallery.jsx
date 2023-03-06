@@ -1,13 +1,12 @@
-import React, { useContext, useState } from 'react'
-import StorageContext from '../Context/StorageContext.jsx'
-import GalleryItem from '../GalleryItem/GalleryItem.jsx'
-import './Gallery.css'
+import React, { useContext, useState } from 'react';
+import StorageContext from '../Context/StorageContext.jsx';
+import GalleryItem from '../GalleryItem/GalleryItem.jsx';
+import './Gallery.css';
 
 const Gallery = () => {
-  const { items } = useContext(StorageContext)
+  const { items } = useContext(StorageContext);
 
-  if (items.length === 0) return <div className='none-content'>No content</div>
-
+  if (items.length === 0) return <div className='none-content'>No content</div>;
 
   return (
     <div className='gallery'>
@@ -15,7 +14,7 @@ const Gallery = () => {
         <GalleryItem key={id} id={id} comment={comment} url={url} />
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default Gallery
+export default Gallery;
